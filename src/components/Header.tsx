@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import myPhoto from '../assets/my-photo.jpg';
 import Button from './Button';
 import { IoSunnyOutline } from "react-icons/io5";

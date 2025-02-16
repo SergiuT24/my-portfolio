@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import myPhoto from '../assets/my-photo.jpg';
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
