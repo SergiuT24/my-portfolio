@@ -9,12 +9,6 @@ import { TbDeviceDesktopCode } from "react-icons/tb";
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [darkMode, setDarkMode] = useState(true);
-
-	const toggleDarkMode = () => {
-		setDarkMode((prevMode) => !prevMode);
-		document.documentElement.classList.toggle("dark", !darkMode);
-	}
 
 	useEffect(() => {
 		const handleScroll = () => {
