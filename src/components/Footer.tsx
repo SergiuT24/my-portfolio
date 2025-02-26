@@ -1,12 +1,15 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	return (
-		<footer className='bg-neutral-900 backdrop-blur-md py-2.5 px-3'>
+		<footer className='bg-gray-300 dark:bg-neutral-900 backdrop-blur-md py-2.5 px-3 border-t-[0.5px] border-gray-500'>
 			<div className='flex justify-between my-2'>
 				<div className='w-1/3 text-center'>
 					<h4>
-						Designed and Developed by Sergiu Tudos
+						{t("design")}
 					</h4>
 				</div>
 				<div className='w-1/3 text-center'>
@@ -17,17 +20,17 @@ const Footer = () => {
 				<div className='flex justify-center w-1/3'>
 					<ul className='flex gap-10'>
 						<li>
-							<a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+							<a href="https://github.com/SergiuT24" target="_blank" className="dark:text-gray-500 hover:text-gray-600 dark:hover:text-white">
 								<FaGithub size={24} />
 							</a>
 						</li>
 						<li>
-							<a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+							<a href="https://www.linkedin.com/in/tudos-sergiu-8476b129b/" target="_blank" className="dark:text-gray-500 hover:text-gray-600 dark:hover:text-white">
 								<FaLinkedin size={24} />
 							</a>
 						</li>
 						<li>
-							<a href="mailto:youremail@example.com" className="hover:text-gray-400">
+							<a href="mailto:cambino7777@gmail.com" className="dark:text-gray-500 hover:text-gray-600 dark:hover:text-white">
 								<FaEnvelope size={24} />
 							</a>
 						</li>

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Photo from '../assets/home-pic.svg';
+import { FaGithub, FaInstagram, FaTelegram, FaLinkedin } from 'react-icons/fa6';
 
-const Home: React.FC = () => {
+type TranslationProps = {
+	welcome: string,
+	name: string,
+	aboutMe: string,
+}
+
+const Home: React.FC<TranslationProps> = ({ welcome, name, aboutMe }) => {
 	const [typedText, setTypedText] = useState('');
 	const [index, setIndex] = useState(0);
 	const targetText = 'FRONT-END DEVELOPER';
@@ -25,26 +32,40 @@ const Home: React.FC = () => {
 	}, [index, targetText]);
 
 	return (
-		<div className='container flex justify-around items-center my-20'>
-			<div className='flex flex-col gap-5 w-1/2'>
+		<section id="home" className='container flex justify-around items-center my-20'>
+			<div className='flex flex-col gap-10 w-1/2'>
 				<h1 className='flex flex-col gap-4 text-center'>
-					<span>Welcome to My Digital World!</span>
-					<span>I'm Sergiu Tudos</span>
+					<span>{welcome}</span>
+					<span>{name}</span>
 				</h1>
 				<p className='text-xl text-center'>
 					{typedText}<span>|</span>
 				</p>
+				<div className='flex justify-center gap-8'>
+					<a href="https://github.com/SergiuT24" target='_blank'>
+						<FaGithub size={30} className='hover:text-gray-500' />
+					</a>
+					<a href="https://www.instagram.com/tudos.sergiu/" target='_blank'>
+						<FaInstagram size={30} className='hover:text-gray-500' />
+					</a>
+					<a href="https://t.me/serhionioex" target='_blank'>
+						<FaTelegram size={30} className='hover:text-gray-500' />
+					</a>
+					<a href="https://www.linkedin.com/in/tudos-sergiu-8476b129b/" target='_blank'>
+						<FaLinkedin size={30} className='hover:text-gray-500' />
+					</a>
+				</div>
 			</div>
 			<div className='w-1/3 flex items-center flex-col justify-center'>
 				<img src={Photo} />
 				<button
 					onClick={clickAbout}
-					className='flex items-center cursor-pointer justify-center w-fit p-3 rounded-2xl border hover:text-gray-400'
+					className='flex items-center cursor-pointer justify-center w-fit p-3 rounded-2xl border hover:text-gray-700 dark:hover:text-gray-400'
 				>
-					More About Me
+					{aboutMe}
 				</button>
 			</div>
-		</div>
+		</section>
 	)
 }
 
