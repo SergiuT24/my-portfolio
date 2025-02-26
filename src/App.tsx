@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import ParticlesBackground from './components/ParticlesBackground'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { BrowserRouter as Router, Route, Routes, Navigate, useParams, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate, useParams } from "react-router-dom";
 
 const LanguageWrapper = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false)
@@ -51,7 +51,7 @@ function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Navigate to="/en" />} /> {/* Redirecționează la /en */}
+				<Route path="/" element={<Navigate to="/en" />} />
 				<Route path="/:lang" element={<LanguageWrapper />} />
 			</Routes>
 		</Router>
