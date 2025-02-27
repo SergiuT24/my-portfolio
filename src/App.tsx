@@ -31,7 +31,7 @@ const LanguageWrapper = () => {
 	const { i18n } = useTranslation();
 
 	useEffect(() => {
-		if (lang) {
+		if (lang && i18n.language !== lang) {
 			i18n.changeLanguage(lang);
 		}
 	}, [lang, i18n]);
