@@ -6,13 +6,13 @@ const Footer = () => {
 
 	return (
 		<footer className='bg-gray-300 dark:bg-neutral-900 backdrop-blur-md py-2.5 px-3 border-t-[0.5px] border-gray-500'>
-			<div className='flex justify-between my-2'>
-				<div className='w-1/3 text-center'>
+			<div className='flex flex-col items-center gap-10 sm:gap-0 sm:flex-row sm:justify-between my-2'>
+				<div className='sm:w-1/3 text-center'>
 					<h4>
 						{t("design")}
 					</h4>
 				</div>
-				<div className='w-1/3 text-center'>
+				<div className='sm:w-1/3 text-center'>
 					<h4>
 						Copyright &copy; 2025 ST
 					</h4>

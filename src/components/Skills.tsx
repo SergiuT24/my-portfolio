@@ -38,10 +38,11 @@ const Skills: React.FC<TranslateProps> = ({ skills }) => {
 	const skillsToDisplay = selectedCategory === 'technical' ? technicalSkills : softSkills;
 
 	return (
-		<section id="skills" className='mx-auto w-full flex justify-center mb-20 bg-gray-300 dark:bg-neutral-900/85 pb-20 px-20 pt-10'>
+		<section id="skills" className='mx-auto w-full flex justify-center mb-20 bg-gray-300 dark:bg-neutral-900/85 pb-20 px-3 pt-10 lg:px-20'>
 			<div className='container'>
 				<h2 className='text-center mb-20'>{skills}</h2>
-				<div className='m-20 flex flex-col gap-10'>
+				{/* Desktop Version */}
+				<div className='hidden md:flex m-20 flex-col gap-10'>
 					<div className='flex justify-center'>
 						<button
 							onClick={() => setSelectedCategory('technical')}
@@ -70,6 +71,51 @@ const Skills: React.FC<TranslateProps> = ({ skills }) => {
 								</div>
 							</div>
 						))}
+					</div>
+				</div>
+				{/* Mobile Version */}
+				<div className='md:hidden'>
+					<div className='flex flex-col gap-20'>
+						<div>
+							<h2 className='mb-6'>{t('technical-skills')}</h2>
+							<div>
+								<ul>
+									{technicalSkills.map((skill, index) => (
+										<li key={index}>
+											<p>{t(skill.name)}</p>
+											<div className='w-full bg-gray-700 rounded-md h-4 mt-1'>
+												<div
+													className='bg-blue-500 h-full rounded-md'
+													style={{
+														width: skill.level,
+													}}
+												></div>
+											</div>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+						<div>
+							<h2 className='mb-6'>{t('soft-skills')}</h2>
+							<div>
+								<ul>
+									{softSkills.map((skill, index) => (
+										<li key={index}>
+											<p>{t(skill.name)}</p>
+											<div className='w-full bg-gray-700 rounded-md h-4 mt-1'>
+												<div
+													className='bg-blue-500 h-full rounded-md'
+													style={{
+														width: skill.level,
+													}}
+												></div>
+											</div>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
