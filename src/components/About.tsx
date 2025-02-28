@@ -13,10 +13,10 @@ type TranslationProps = {
 const About: React.FC<TranslationProps> = ({ about, descriptionOne, descriptionTwo, descriptionThree }) => {
 
 	return (
-		<section id="about" className='container mb-20 bg-gray-200 bg-gray-300 dark:bg-neutral-900/85 dark:border-[0.5px] dark:border-gray-500 rounded-4xl pb-20 px-20 pt-10'>
-			<h2 className='text-center mb-20'>{about}</h2>
-			<div className='flex justify-around'>
-				<div className='w-1/4'>
+		<section id="about" className='container mb-20 bg-gray-200 bg-gray-300 dark:bg-neutral-900/85 md:dark:border-[0.5px] dark:border-gray-500 rounded-4xl pb-20 lg:px-20 pt-10'>
+			<h2 className='text-center mb-10 lg:mb-20'>{about}</h2>
+			<div className='flex flex-col items-center gap-20 p-5 lg:gap-0 lg:flex-row lg:justify-around'>
+				<div className='md:w-1/2 lg:w-1/3 xl:w-1/4'>
 					<div className='p-5 rounded-2xl bg-gray-400 dark:bg-neutral-800'>
 						<img className='rounded-2xl' src={myPhoto} alt='Avatar-placeholder' />
 						<div className='flex justify-around py-5'>
@@ -27,7 +27,7 @@ const About: React.FC<TranslationProps> = ({ about, descriptionOne, descriptionT
 						</div>
 					</div>
 				</div>
-				<div className='w-1/2 flex flex-col justify-center'>
+				<div className='md:w-1/2 flex flex-col justify-center'>
 					<p className='text-sm'>
 						{descriptionOne}
 					</p>

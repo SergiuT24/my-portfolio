@@ -32,9 +32,9 @@ const Home: React.FC<TranslationProps> = ({ welcome, name, aboutMe }) => {
 	}, [index, targetText]);
 
 	return (
-		<section id="home" className='container flex justify-around items-center my-20'>
-			<div className='flex flex-col gap-10 w-1/2'>
-				<h1 className='flex flex-col gap-4 text-center'>
+		<section id="home" className="container flex flex-col py-10 gap-10 justify-around items-center mt-20 mb-5 md:py-20 lg:flex-row lg:py-0 lg:gap-0 md:my-20">
+			<div className='flex flex-col gap-10 lg:w-1/2'>
+				<h1 className='text-3xl md:text-4xl lg:text-5xl flex flex-col gap-4 text-center'>
 					<span>{welcome}</span>
 					<span>{name}</span>
 				</h1>
@@ -56,11 +56,11 @@ const Home: React.FC<TranslationProps> = ({ welcome, name, aboutMe }) => {
 					</a>
 				</div>
 			</div>
-			<div className='w-1/3 flex items-center flex-col justify-center'>
+			<div className='w-[70%] lg:w-1/3 flex items-center flex-col justify-center'>
 				<img src={Photo} />
 				<button
 					onClick={clickAbout}
-					className='flex items-center cursor-pointer justify-center w-fit p-3 rounded-2xl border hover:text-gray-700 dark:hover:text-gray-400'
+					className='hidden lg:flex items-center cursor-pointer justify-center w-fit p-3 rounded-2xl border hover:text-gray-700 dark:hover:text-gray-400'
 				>
 					{aboutMe}
 				</button>

@@ -19,7 +19,7 @@ const Layout = () => {
 					aboutMe={t("about-me")}
 				/>
 			</Element>
-			<Element name="about" className='w-full flex justify-center px-10'>
+			<Element name="about" className='w-full flex justify-center px-3 md:px-10'>
 				<About
 					about={t("about")}
 					descriptionOne={t("description-one")}

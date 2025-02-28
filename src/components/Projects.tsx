@@ -18,34 +18,46 @@ const Projects: React.FC<TranslateProps> = ({ myProjects, snake, snakeAbout, fif
 	return (
 		<section id="projects" className='container flex items-center flex-col mb-20'>
 			<h2 className='text-center mb-20'>{myProjects}</h2>
-			<div className='grid grid-cols-3 gap-10'>
+			<div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12'>
 				<Project
 					img={snakePic}
+					link={'https://github.com/SergiuT24/snake-game'}
+					linkDemo={'https://classicsnake-game.netlify.app/'}
 					title={snake}
 					about={snakeAbout}
 				/>
 				<Project
 					img={fifaPic}
+					link={'https://github.com/SergiuT24/fifa-11'}
+					linkDemo={'https://fifa11team.netlify.app/'}
 					title={fifa}
 					about={fifaAbout}
 				/>
 				<Project
 					img={zodiakPic}
+					link={'https://github.com/SergiuT24/Zodiac'}
+					linkDemo={'https://zodiak.md/'}
 					title={horoscope}
 					about={horoscopeAbout}
 				/>
 				<Project
 					img={snakePic}
+					link={'https://github.com/SergiuT24/fifa-11'}
+					linkDemo={'https://fifa11team.netlify.app/'}
 					title={snake}
 					about={snakeAbout}
 				/>
 				<Project
 					img={fifaPic}
+					link={'https://github.com/SergiuT24/fifa-11'}
+					linkDemo={'https://fifa11team.netlify.app/'}
 					title={fifa}
 					about={fifaAbout}
 				/>
 				<Project
 					img={zodiakPic}
+					link={'https://github.com/SergiuT24/fifa-11'}
+					linkDemo={'https://fifa11team.netlify.app/'}
 					title={horoscope}
 					about={horoscopeAbout}
 				/>
