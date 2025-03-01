@@ -12,9 +12,9 @@ const Skills: React.FC<TranslateProps> = ({ skills }) => {
 	const technicalSkills = [
 		{ name: 'HTML', level: '80%' },
 		{ name: 'CSS', level: '75%' },
-		{ name: 'JavaScript', level: '70%' },
-		{ name: 'React', level: '50%' },
-		{ name: 'TypeScript', level: '40%' },
+		{ name: 'JavaScript', level: '75%' },
+		{ name: 'React', level: '65%' },
+		{ name: 'TypeScript', level: '30%' },
 	];
 
 	const softSkills = [
@@ -77,7 +77,7 @@ const Skills: React.FC<TranslateProps> = ({ skills }) => {
 				<div className='md:hidden'>
 					<div className='flex flex-col gap-20'>
 						<div>
-							<h2 className='mb-6'>{t('technical-skills')}</h2>
+							<h3 className='mb-6 text-center'>{t('technical-skills')}</h3>
 							<div>
 								<ul>
 									{technicalSkills.map((skill, index) => (
@@ -97,7 +97,7 @@ const Skills: React.FC<TranslateProps> = ({ skills }) => {
 							</div>
 						</div>
 						<div>
-							<h2 className='mb-6'>{t('soft-skills')}</h2>
+							<h3 className='mb-6 text-center'>{t('soft-skills')}</h3>
 							<div>
 								<ul>
 									{softSkills.map((skill, index) => (
