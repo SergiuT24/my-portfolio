@@ -1,5 +1,5 @@
 import React from 'react'
-import MainButton from './MainButton';
+import MainButton from './UI/MainButton';
 import { FaGithub } from 'react-icons/fa6'
 import { FaPlayCircle } from "react-icons/fa";
 

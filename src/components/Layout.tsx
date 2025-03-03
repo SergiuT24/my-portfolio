@@ -35,7 +35,14 @@ const Layout = () => {
 					fifa={t("fifa")}
 					fifaAbout={t("fifa-about")}
 					horoscope={t("horoscope")}
-					horoscopeAbout={t("horoscope-about")} />
+					horoscopeAbout={t("horoscope-about")}
+					portfolio={t("portfolio")}
+					portfolioAbout={t("portfolio-about")}
+					todo={t("todo")}
+					todoAbout={t("todo-about")}
+					fifarobot={t("fifarobot")}
+					fifarobotAbout={t("fifarobot-about")}
+				/>
 			</Element>
 			<Element name="skills" className='w-full'>
 				<Skills skills={t("skills")} />

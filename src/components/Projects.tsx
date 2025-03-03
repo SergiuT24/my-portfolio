@@ -3,6 +3,9 @@ import Project from './Project'
 import snakePic from '../assets/snake-game.png';
 import fifaPic from '../assets/fifa-11.png';
 import zodiakPic from '../assets/zodiak.png';
+import portfolioPic from '../assets/portfolio.png';
+import todoPic from '../assets/toDoApp.png';
+import fifaRobotPic from '../assets/fifa-robot.png';
 
 type TranslateProps = {
 	myProjects: string,
@@ -12,9 +15,15 @@ type TranslateProps = {
 	fifaAbout: string,
 	horoscope: string,
 	horoscopeAbout: string,
+	portfolio: string,
+	portfolioAbout: string,
+	todo: string,
+	todoAbout: string,
+	fifarobot: string,
+	fifarobotAbout: string,
 }
 
-const Projects: React.FC<TranslateProps> = ({ myProjects, snake, snakeAbout, fifa, fifaAbout, horoscope, horoscopeAbout }) => {
+const Projects: React.FC<TranslateProps> = ({ myProjects, snake, snakeAbout, fifa, fifaAbout, horoscope, horoscopeAbout, portfolio, portfolioAbout, todo, todoAbout, fifarobot, fifarobotAbout }) => {
 	return (
 		<section id="projects" className='container flex items-center flex-col mb-20'>
 			<h2 className='text-center mb-20'>{myProjects}</h2>
@@ -41,25 +50,25 @@ const Projects: React.FC<TranslateProps> = ({ myProjects, snake, snakeAbout, fif
 					about={horoscopeAbout}
 				/>
 				<Project
-					img={snakePic}
-					link={'https://github.com/SergiuT24/fifa-11'}
-					linkDemo={'https://fifa11team.netlify.app/'}
-					title={snake}
-					about={snakeAbout}
+					img={portfolioPic}
+					link={'https://github.com/SergiuT24/my-portfolio'}
+					linkDemo={'https://sergiutudos.netlify.app'}
+					title={portfolio}
+					about={portfolioAbout}
 				/>
 				<Project
-					img={fifaPic}
-					link={'https://github.com/SergiuT24/fifa-11'}
-					linkDemo={'https://fifa11team.netlify.app/'}
-					title={fifa}
-					about={fifaAbout}
+					img={todoPic}
+					link={'https://github.com/SergiuT24/ToDo'}
+					linkDemo={'https://to-do-app4.netlify.app/'}
+					title={todo}
+					about={todoAbout}
 				/>
 				<Project
-					img={zodiakPic}
-					link={'https://github.com/SergiuT24/fifa-11'}
-					linkDemo={'https://fifa11team.netlify.app/'}
-					title={horoscope}
-					about={horoscopeAbout}
+					img={fifaRobotPic}
+					link={'https://github.com/SergiuT24/fifa-bot'}
+					linkDemo={'https://github.com/SergiuT24/fifa-bot/blob/b4b5f4bf2e71fd37bac229a15f867a62282316a1/README.md'}
+					title={fifarobot}
+					about={fifarobotAbout}
 				/>
 			</div>
 		</section>

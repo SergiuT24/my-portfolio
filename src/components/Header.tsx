@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from '../context/ThemeContext';
 import myPhoto from '../assets/my-photo.jpg';
-import HeaderButton from './HeaderButton';
+import HeaderButton from './UI/HeaderButton';
 import { Link } from 'react-scroll';
 import { IoSunnyOutline } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa6";
@@ -9,7 +9,7 @@ import { FaHome, FaProjectDiagram } from "react-icons/fa";
 import { MdTextsms } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import { TbDeviceDesktopCode } from "react-icons/tb";
-import LanguageSelector from './LanguageSelector';
+import LanguageSelector from './UI/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 
@@ -83,25 +83,25 @@ const Header: React.FC = () => {
 							<p>{t("contact")}</p>
 						</Link>
 					</nav>
-					<button className='absolute top-4 right-4 dark:text-white' onClick={() => setOpened(false)}>
+					<button className='cursor-pointer absolute top-4 right-4 dark:text-white' onClick={() => setOpened(false)}>
 						<X size={32} />
 					</button>
 				</div>
 				{/* Desktop Menu */}
 				<nav className="hidden lg:flex items-center gap-9">
-					<Link to="home" smooth={true} duration={800} className='flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
+					<Link to="home" smooth={true} duration={800} className='cursor-pointer flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
 						<FaHome />
 						<p>{t("home")}</p>
 					</Link>
-					<Link to="projects" smooth={true} duration={800} offset={-70} className='flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
+					<Link to="projects" smooth={true} duration={800} offset={-70} className='cursor-pointer flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
 						<FaProjectDiagram />
 						<p>{t("projects")}</p>
 					</Link>
-					<Link to="skills" smooth={true} duration={800} offset={-70} className='flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
+					<Link to="skills" smooth={true} duration={800} offset={-70} className='cursor-pointer flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
 						<GiSkills />
 						<p>{t("skills")}</p>
 					</Link>
-					<Link to="contact" smooth={true} duration={800} offset={-70} className='flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
+					<Link to="contact" smooth={true} duration={800} offset={-70} className='cursor-pointer flex items-center gap-2 text-black dark:text-gray-400 dark:hover:text-white hover:text-gray-800'>
 						<MdTextsms />
 						<p>{t("contact")}</p>
 					</Link>
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
 					/>
 				</div>
 				<img className='hidden lg:flex w-10 h-10 rounded-full' src={myPhoto} />
-				<button className='lg:hidden hover:text-gray-400 dark:text-gray-400 dark:hover:text-white' onClick={() => setOpened(!opened)}>
+				<button className='cursor-pointer lg:hidden hover:text-gray-400 dark:text-gray-400 dark:hover:text-white' onClick={() => setOpened(!opened)}>
 					{opened ? <X size={32} /> : <Menu size={32} />}
 				</button>
 			</div>

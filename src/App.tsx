@@ -2,7 +2,7 @@ import './styles/App.css'
 import Header from './components/Header'
 import Layout from './components/Layout'
 import Footer from './components/Footer'
-import ParticlesBackground from './components/ParticlesBackground'
+import ParticlesBackground from './components/UI/ParticlesBackground'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BrowserRouter as Router, Route, Routes, Navigate, useParams } from "react-router-dom";
